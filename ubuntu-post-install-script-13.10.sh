@@ -69,12 +69,9 @@ echo 'Current package list:
 easytag
 filezilla
 gnome-tweak-tool
-gpick
-grsync
 nautilus-dropbox
 nautilus-open-terminal
 pyrenamer
-openshot
 gparted
 vlc
 pgadmin3
@@ -82,7 +79,6 @@ wajig
 tasksel
 mysql-workbench
 dia
-devede
 guake
 diffuse
 cheese
@@ -94,7 +90,7 @@ case $REPLY in
 [Yy]* )
     echo 'Requires root privileges:'
     # Feel free to change to whatever suits your preferences.
-    sudo apt-get install -y --no-install-recommends easytag filezilla gnome-tweak-tool gpick grsync nautilus-dropbox nautilus-open-terminal pyrenamer vlc openshot gparted pgadmin3 wajig tasksel mysql-workbench dia devede guake diffuse cheese shutter
+    sudo apt-get install -y --no-install-recommends easytag filezilla gnome-tweak-tool nautilus-dropbox nautilus-open-terminal pyrenamer vlc gparted pgadmin3 wajig tasksel mysql-workbench dia guake diffuse cheese shutter
     echo 'Done.'
     main
     ;;
@@ -165,10 +161,7 @@ case $REPLY in
   echo 'Current package list:
   texlive
   texlive-generic-recomended
-  texlive-full
   preview-latex-style
-  m4
-  ghostscript
   pdf2svg'
   echo ''
   read -p 'Proceed? (Y)es, (N)o : ' REPLY
@@ -177,7 +170,7 @@ case $REPLY in
   [Yy]* )
       echo 'Requires root privileges:'
       # Feel free to change to whatever suits your preferences.
-      sudo apt-get install -y --no-install-recommends texlive texlive-generic-recomended texlive-full preview-latex-style m4 ghostscript pdf2svg
+      sudo apt-get install -y --no-install-recommends texlive texlive-generic-recommended texlive-fonts-recommended texlive-math-extra texlive-latex-recommended texlive-pictures texlive-fonts-extra texlive-fonts-extra texlive-humanities texlive-lang-english texlive-lang-spanish texlive-generic-extra texlive-metapost texlive-publishers texlive-science texlive-formats-extra preview-latex-style pdf2svg
       echo 'Done.'
       clear && system
       ;;
@@ -331,12 +324,8 @@ case $REPLY in
     eclipse
     git
     gitg
-    glade
     python-launchpadlib
     python3-distutils-extra
-    qtcreator
-    ruby
-    ubuntu-dev-tools
     build-essential
     libssl-dev
     g++'
@@ -347,7 +336,7 @@ case $REPLY in
     [Yy]* )
         echo 'Requires root privileges:'
         # Feel free to change to whatever suits your preferences.
-        sudo apt-get install -y devscripts eclipse git gitg glade gtk-3-examples python-launchpadlib python3-distutils-extra qtcreator ruby ubuntu-dev-tools build-essential libssl-dev curl g++
+        sudo apt-get install -y devscripts eclipse git gitg python-launchpadlib python3-distutils-extra build-essential libssl-dev curl g++
         echo 'Done.'
         development
         ;;
@@ -413,8 +402,6 @@ echo ''
 echo 'Installing design tools...'
 echo ''
 echo 'Current package list:
-fontforge
-fontforge-extras
 gimp
 gimp-plugin-registry
 icontool
@@ -427,7 +414,7 @@ case $REPLY in
 [Yy]* )
     echo 'Requires root privileges:'
     # Feel free to change to whatever suits your preferences.
-    sudo apt-get install -y fontforge fontforge-extras gimp gimp-plugin-registry icontool imagemagick inkscape
+    sudo apt-get install -y gimp gimp-plugin-registry icontool imagemagick inkscape
     echo 'Done.'
     main
     ;;
@@ -696,11 +683,11 @@ case $REPLY in
     # Font Sizes
     echo 'Setting font preferences...'
     gsettings set org.gnome.desktop.interface text-scaling-factor '1.0'
-    gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 10'
-    gsettings set org.gnome.desktop.interface font-name 'Ubuntu 10'
-    gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 11'
-    gsettings set org.gnome.nautilus.desktop font 'Ubuntu 10'
-    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 9'
+    gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 11'
+    gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
+    gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 12'
+    gsettings set org.gnome.nautilus.desktop font 'Ubuntu 11'
+    gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 10'
     gsettings set org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
     gsettings set org.gnome.settings-daemon.plugins.xsettings hinting 'slight'
     # Unity Settings
